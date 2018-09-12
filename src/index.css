@@ -282,7 +282,7 @@ main section form div:last-of-type {
 }
 
 main section form div:last-of-type input {
-  background: green;
+  background: rgba(0, 128, 0, 0.596);
   padding: 10px;
   color: #fff;
   border-radius: 10px;
