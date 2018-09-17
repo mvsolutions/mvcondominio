@@ -7,7 +7,7 @@ class Nav extends Component {
         <ul>
           <li className="logo">
             Mv
-            <span>Solutions</span>
+            <span>Condomínios</span>
           </li>
         </ul>
         <ul>
