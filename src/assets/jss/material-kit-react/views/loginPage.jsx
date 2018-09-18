@@ -23,7 +23,7 @@ const signupPageStyle = {
     border: "0",
     alignItems: "center",
     "&:before": {
-      background: "rgba(0, 0, 0, 0.5)"
+      background: "rgba(0, 0, 0, 0.2)"
     },
     "&:before,&:after": {
       position: "absolute",
@@ -41,7 +41,7 @@ const signupPageStyle = {
     "& footer": {
       position: "absolute",
       bottom: "0",
-      width: "100%",
+      width: "100%"
     }
   },
   form: {
