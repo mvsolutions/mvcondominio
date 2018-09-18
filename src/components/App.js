@@ -10,15 +10,16 @@ import PasswordForgetPage from "./PasswordForget";
 import HomePage from "./Home";
 import AccountPage from "./Account";
 import LoginPage from "../views/LoginPage/LoginPage";
+import LandingPageTest from "../views/LandingPage/LandingPage";
 
 import * as routes from "../constants/routes";
 
 const App = () => (
   <Router>
     <div>
-      <Navigation />
+      {/* <Navigation />
 
-      <hr />
+      <hr /> */}
 
       <Route exact path={routes.LANDING} component={LandingPage} />
       <Route exact path={routes.SIGN_UP} component={SignUpPage} />
@@ -31,6 +32,7 @@ const App = () => (
       <Route exact path={routes.HOME} component={HomePage} />
       <Route exact path={routes.ACCOUNT} component={AccountPage} />
       <Route exact path={routes.LOGIN} component={LoginPage} />
+      <Route exact path={routes.LANDING_PAGE} component={LandingPageTest} />
     </div>
   </Router>
 );
