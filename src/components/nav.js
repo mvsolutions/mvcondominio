@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import logo from "../images/cond.png";
 
 class Nav extends Component {
   render() {
@@ -6,8 +7,7 @@ class Nav extends Component {
       <nav>
         <ul>
           <li className="logo">
-            Mv
-            <span>Condomínios</span>
+            <img height="25px" src={logo} />
           </li>
         </ul>
         <ul>

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import logo from "../images/logo.png";
 
 class Footer extends Component {
   render() {
     return (
       <footer>
-        <h3>Copyright - MV Solutions.</h3>
+        <img height="70px" src={logo} />
         <p>
           Support <br /> mvsolutions18@gmail.com
         </p>
