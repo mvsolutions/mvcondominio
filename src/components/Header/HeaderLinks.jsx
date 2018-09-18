@@ -46,14 +46,8 @@ function HeaderLinks({ ...props }) {
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to={"/login-page"} className={classes.link}>
-          <Button
-            color="transparent"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <Person className={classes.icons} /> Login
-          </Button>
+        <Link to={"/login-page"} className={classes.navLink}>
+          <Person className={classes.icons} /> Login
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
