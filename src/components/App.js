@@ -1,24 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import withAuthentication from "./withAuthentication";
 
 import Navigation from "./Navigation";
-import LandingPage from "./Landing";
+import LandingPage from "../views/LandingPage/LandingPage";
 import SignUpPage from "./SignUp";
 import SignInPage from "./SignIn";
 import PasswordForgetPage from "./PasswordForget";
 import HomePage from "./Home";
 import AccountPage from "./Account";
+import LoginPage from "../views/LoginPage/LoginPage";
 
 import * as routes from "../constants/routes";
 
 const App = () => (
   <Router>
-    <div>
+    {/* <div>
       <Navigation />
 
-      <hr />
-
+      <hr /> */}
+    <Switch>
       <Route exact path={routes.LANDING} component={LandingPage} />
       <Route exact path={routes.SIGN_UP} component={SignUpPage} />
       <Route exact path={routes.SIGN_IN} component={SignInPage} />
@@ -29,7 +30,9 @@ const App = () => (
       />
       <Route exact path={routes.HOME} component={HomePage} />
       <Route exact path={routes.ACCOUNT} component={AccountPage} />
-    </div>
+      <Route exact path={routes.LOGIN} component={LoginPage} />
+    </Switch>
+    {/* </div> */}
   </Router>
 );
 
