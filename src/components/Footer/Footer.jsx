@@ -6,6 +6,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { List, ListItem, withStyles } from "@material-ui/core";
 
+import img from "assets/img/logo.png";
+
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
 
@@ -25,56 +27,13 @@ function Footer({ ...props }) {
     <footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.left}>
-          <List className={classes.list}>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/"
-                className={classes.block}
-                target="_blank"
-              >
-                Creative Tim
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/presentation"
-                className={classes.block}
-                target="_blank"
-              >
-                About us
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://blog.creative-tim.com/"
-                className={classes.block}
-                target="_blank"
-              >
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://www.creative-tim.com/license"
-                className={classes.block}
-                target="_blank"
-              >
-                Licenses
-              </a>
-            </ListItem>
-          </List>
+          <img width="150px" src={img} />
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a
-            href="https://www.creative-tim.com"
-            className={aClasses}
-            target="_blank"
-          >
-            Creative Tim
-          </a>{" "}
-          for a better web.
+          &copy; {1900 + new Date().getYear()} - Desenvolvido por{" "}
+          <a href="#" className={aClasses} target="_blank">
+            MV SOLUTIONS.
+          </a>
         </div>
       </div>
     </footer>

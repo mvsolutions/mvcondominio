@@ -20,13 +20,14 @@ class ProductSection extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem xs={12} sm={12} md={8}>
-            <h2 className={classes.title}>Let's talk product</h2>
+            <h2 className={classes.title}>Vamos falar sobre o App!</h2>
             <h5 className={classes.description}>
-              This is the paragraph where you can write more details about your
-              product. Keep you user engaged by providing meaningful
-              information. Remember that by this time, the user is curious,
-              otherwise he wouldn't scroll to get here. Add a button if you want
-              the user to see more.
+              Nosso App facilita a comunicação entre moradores e síndico,
+              notifica o morador sobre futuras reuniões ou qualquer ocorrido
+              dentro do condomínio, e permite que o morador faça o booking
+              (locação) de qualquer área comum do prédio, sem aquela papelada
+              toda e podendo ser feita de qualquer lugar, com muito mais
+              facilidade de forma ágil e prática!
             </h5>
           </GridItem>
         </GridContainer>
