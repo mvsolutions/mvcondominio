@@ -32,7 +32,7 @@ function Footer({ ...props }) {
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} - Desenvolvido por{" "}
           <a href="#" className={aClasses} target="_blank">
-            MV SOLUTIONS.
+            MV Solutions.
           </a>
         </div>
       </div>

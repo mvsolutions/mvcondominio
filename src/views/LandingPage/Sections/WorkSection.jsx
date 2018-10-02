@@ -63,7 +63,7 @@ class WorkSection extends React.Component {
                     md={4}
                     className={classes.textCenter}
                   >
-                    <Button color="info">Enviar</Button>
+                    <Button color="primary">Enviar</Button>
                   </GridItem>
                 </GridContainer>
               </GridContainer>
