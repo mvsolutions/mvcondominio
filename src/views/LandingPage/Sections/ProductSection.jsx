@@ -36,7 +36,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title="Reserva de áreas comuns"
-                description="Com essa função, você pode reserver qualquer área comum sem precisar levantar do sofá. Com poucos cliques, você terá a sua área de lazer favorita."
+                description="Que tal reservar a sua área de lazer favorita sem se preocupar em levantar do sofá? Deixa que a gente faz isso pra você. Com poucos cliques, você terá a sua área de lazer favorita."
                 icon={LocationCity}
                 iconColor="info"
                 vertical
@@ -45,7 +45,7 @@ class ProductSection extends React.Component {
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
                 title="Notificações de eventos"
-                description="Com essa função, você será sempre notificado sobre todos os eventos acontecendo no seu condomínio em tempo real."
+                description="É sempre bom saber o que acontece onde você mora não é mesmo? Com o App, você será sempre notificado sobre todos os eventos acontecendo no seu condomínio em tempo real."
                 icon={Event}
                 iconColor="info"
                 vertical

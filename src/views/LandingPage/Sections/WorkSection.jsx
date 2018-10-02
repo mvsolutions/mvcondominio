@@ -19,18 +19,16 @@ class WorkSection extends React.Component {
       <div className={classes.section}>
         <GridContainer justify="center">
           <GridItem cs={12} sm={12} md={8}>
-            <h2 className={classes.title}>Work with us</h2>
+            <h2 className={classes.title}>Contato</h2>
             <h4 className={classes.description}>
-              Divide details about your product or agency work into parts. Write
-              a few lines about each one and contact us about any further
-              collaboration. We will responde get back to you in a couple of
-              hours.
+              Caso tiver algum problema ou reclamação, entre em contato conosco,
+              ficaremos felizes em ajudá-lo!
             </h4>
             <form>
               <GridContainer>
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
-                    labelText="Your Name"
+                    labelText="Seu nome"
                     id="name"
                     formControlProps={{
                       fullWidth: true
@@ -39,7 +37,7 @@ class WorkSection extends React.Component {
                 </GridItem>
                 <GridItem xs={12} sm={12} md={6}>
                   <CustomInput
-                    labelText="Your Email"
+                    labelText="Email"
                     id="email"
                     formControlProps={{
                       fullWidth: true
@@ -47,7 +45,7 @@ class WorkSection extends React.Component {
                   />
                 </GridItem>
                 <CustomInput
-                  labelText="Your Message"
+                  labelText="Mensagem"
                   id="message"
                   formControlProps={{
                     fullWidth: true,
@@ -65,7 +63,7 @@ class WorkSection extends React.Component {
                     md={4}
                     className={classes.textCenter}
                   >
-                    <Button color="primary">Send Message</Button>
+                    <Button color="info">Enviar</Button>
                   </GridItem>
                 </GridContainer>
               </GridContainer>
