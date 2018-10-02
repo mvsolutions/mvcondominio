@@ -88,7 +88,7 @@ legend {
     outline: 0; }
 
 a {
-  color: #0094ff;
+  color: #9c27b0;
   text-decoration: none;
   background-color: transparent; }
   a:hover, a:focus {
@@ -188,7 +188,7 @@ form {
   cursor: pointer;
   border-radius: 100%;
   transition: all 0.2s ease-out;
-  border: 1px solid #0094ff;
+  border: 1px solid #9c27b0;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
 
@@ -208,7 +208,7 @@ form {
   border-radius: 3px; }
 
 .noUi-connect {
-  background: #0094ff;
+  background: #9c27b0;
   border-radius: 3px;
   -webkit-transition: background 450ms;
   transition: background 450ms; }
@@ -360,9 +360,9 @@ form {
 .slider {
   margin-bottom: 15px; }
   .slider.slider-primary .noUi-connect, .slider.slider-primary.noUi-connect {
-    background-color: #0094ff; }
+    background-color: #9c27b0; }
   .slider.slider-primary .noUi-handle {
-    border-color: #0094ff; }
+    border-color: #9c27b0; }
   .slider.slider-info .noUi-connect, .slider.slider-info.noUi-connect {
     background-color: #00bcd4; }
   .slider.slider-info .noUi-handle {
@@ -500,7 +500,7 @@ form {
   padding: 0px;
   border-radius: 50%; }
   .rdtDay.rdtToday.rdtActive, .rdtDay.rdtActive, .rdtDay.rdtActive:hover {
-    background-color: #0094ff !important;
+    background-color: #9c27b0 !important;
     color: #fff;
     box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(156, 39, 176, 0.6); }
 
@@ -567,7 +567,7 @@ form {
 .rdtPicker th.rdtNext,
 .rdtPicker th.rdtPrev,
 .rdtPicker .rdtTimeToggle {
-  color: #0094ff; }
+  color: #9c27b0; }
 
 .rdtPrev span,
 .rdtNext span {
@@ -643,9 +643,9 @@ td.rdtYear:hover {
     border: 1px solid transparent; }
 
 .rdtCounters .rdtCounter:last-child .rdtCount {
-  color: #0094ff;
+  color: #9c27b0;
   border-radius: 50%;
-  border: 1px solid #0094ff; }
+  border: 1px solid #9c27b0; }
 
 .rdtCounterSeparator {
   padding: 7px;
@@ -711,7 +711,7 @@ td.rdtYear:hover {
     .rdtMonths .rdtYear.rdtActive,
     .rdtYears .rdtMonth.rdtActive,
     .rdtYears .rdtYear.rdtActive {
-      background-color: #0094ff !important;
+      background-color: #9c27b0 !important;
       color: #fff; }
 
 /* Slider */

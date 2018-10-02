@@ -32,7 +32,7 @@ class LandingPage extends React.Component {
         <Header
           color="transparent"
           routes={dashboardRoutes}
-          brand="MVCONDOMÍNIOS"
+          brand="MV Condomínios"
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
@@ -52,7 +52,7 @@ class LandingPage extends React.Component {
                 </h4>
                 <br />
                 <Button
-                  color="danger"
+                  color="primary"
                   size="lg"
                   href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                   target="_blank"

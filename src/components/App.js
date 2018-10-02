@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import withAuthentication from "./withAuthentication";
 
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
 import LandingPage from "../views/LandingPage/LandingPage";
 import SignUpPage from "./SignUp";
 import SignInPage from "./SignIn";

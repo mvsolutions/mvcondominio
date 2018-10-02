@@ -38,7 +38,7 @@ class ProductSection extends React.Component {
                 title="Reserva de áreas comuns"
                 description="Que tal reservar a sua área de lazer favorita sem se preocupar em levantar do sofá? Deixa que a gente faz isso pra você. Com poucos cliques, você terá a sua área de lazer favorita."
                 icon={LocationCity}
-                iconColor="info"
+                iconColor="primary"
                 vertical
               />
             </GridItem>
@@ -47,7 +47,7 @@ class ProductSection extends React.Component {
                 title="Notificações de eventos"
                 description="É sempre bom saber o que acontece onde você mora não é mesmo? Com o App, você será sempre notificado sobre todos os eventos acontecendo no seu condomínio em tempo real."
                 icon={Event}
-                iconColor="info"
+                iconColor="primary"
                 vertical
               />
             </GridItem>
@@ -56,7 +56,7 @@ class ProductSection extends React.Component {
                 title="Notificações de encomendas"
                 description="Quem não fica ansioso por uma encomenda? Com essa função, você será notificado pelo App no exato momento que a sua encomenda chegar."
                 icon={NotificationsActive}
-                iconColor="info"
+                iconColor="primary"
                 vertical
               />
             </GridItem>
