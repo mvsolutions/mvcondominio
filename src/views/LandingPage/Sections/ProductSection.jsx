@@ -3,9 +3,9 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
+import LocationCity from "@material-ui/icons/LocationCity";
+import Event from "@material-ui/icons/Event";
+import NotificationsActive from "@material-ui/icons/NotificationsActive";
 // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
@@ -35,28 +35,28 @@ class ProductSection extends React.Component {
           <GridContainer>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Free Chat"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={Chat}
+                title="Reserva de áreas comuns"
+                description="Com essa função, você pode reserver qualquer área comum sem precisar levantar do sofá. Com poucos cliques, você terá a sua área de lazer favorita."
+                icon={LocationCity}
                 iconColor="info"
                 vertical
               />
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Verified Users"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={VerifiedUser}
-                iconColor="success"
+                title="Notificações de eventos"
+                description="Com essa função, você será sempre notificado sobre todos os eventos acontecendo no seu condomínio em tempo real."
+                icon={Event}
+                iconColor="info"
                 vertical
               />
             </GridItem>
             <GridItem xs={12} sm={12} md={4}>
               <InfoArea
-                title="Fingerprint"
-                description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-                icon={Fingerprint}
-                iconColor="danger"
+                title="Notificações de encomendas"
+                description="Quem não fica ansioso por uma encomenda? Com essa função, você será notificado pelo App no exato momento que a sua encomenda chegar."
+                icon={NotificationsActive}
+                iconColor="info"
                 vertical
               />
             </GridItem>
