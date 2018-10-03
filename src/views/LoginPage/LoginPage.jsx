@@ -47,7 +47,7 @@ class LoginPage extends React.Component {
         <Header
           absolute
           color="transparent"
-          brand="MV Condomínions"
+          brand="MV Condomínios"
           rightLinks={<HeaderLinks />}
           {...rest}
         />
@@ -66,44 +66,9 @@ class LoginPage extends React.Component {
                   <form className={classes.form}>
                     <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Login</h4>
-                      <div className={classes.socialLine}>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className={"fab fa-facebook"} />
-                        </Button>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className={"fab fa-google-plus-g"} />
-                        </Button>
-                      </div>
                     </CardHeader>
-                    <p className={classes.divider}>Ou</p>
+                    <p className={classes.divider} />
                     <CardBody>
-                      <CustomInput
-                        labelText="Primeiro nome..."
-                        id="first"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          type: "text",
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <People className={classes.inputIconsColor} />
-                            </InputAdornment>
-                          )
-                        }}
-                      />
                       <CustomInput
                         labelText="Email..."
                         id="email"
@@ -139,7 +104,7 @@ class LoginPage extends React.Component {
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
                       <Button simple color="primary" size="lg">
-                        Salvar
+                        Entrar
                       </Button>
                     </CardFooter>
                   </form>
