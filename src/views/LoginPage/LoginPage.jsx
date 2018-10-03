@@ -9,7 +9,7 @@ import People from "@material-ui/icons/People";
 // core components
 import Header from "components/Header/Header.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import Footer from "components/Footer/Footer.jsx";
+//import Footer from "components/Footer/Footer.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import Button from "components/CustomButtons/Button.jsx";
@@ -74,15 +74,6 @@ class LoginPage extends React.Component {
                           color="transparent"
                           onClick={e => e.preventDefault()}
                         >
-                          <i className={"fab fa-twitter"} />
-                        </Button>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
                           <i className={"fab fa-facebook"} />
                         </Button>
                         <Button
@@ -96,10 +87,10 @@ class LoginPage extends React.Component {
                         </Button>
                       </div>
                     </CardHeader>
-                    <p className={classes.divider}>Or Be Classical</p>
+                    <p className={classes.divider}>Ou</p>
                     <CardBody>
                       <CustomInput
-                        labelText="First Name..."
+                        labelText="Primeiro nome..."
                         id="first"
                         formControlProps={{
                           fullWidth: true
@@ -129,7 +120,7 @@ class LoginPage extends React.Component {
                         }}
                       />
                       <CustomInput
-                        labelText="Password"
+                        labelText="Senha"
                         id="pass"
                         formControlProps={{
                           fullWidth: true
@@ -148,7 +139,7 @@ class LoginPage extends React.Component {
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
                       <Button simple color="primary" size="lg">
-                        Get started
+                        Salvar
                       </Button>
                     </CardFooter>
                   </form>
@@ -156,7 +147,6 @@ class LoginPage extends React.Component {
               </GridItem>
             </GridContainer>
           </div>
-          <Footer whiteFont />
         </div>
       </div>
     );
