@@ -4,13 +4,14 @@ import withAuthentication from "./components/withAuthentication";
 
 // import Navigation from "./Navigation";
 import LandingPage from "./views/LandingPage/LandingPage";
-import SignUpPage from "./components/SignUp";
+import SignUpPage from "./views/SignUpPage/SignUpPage";
 import SignInPage from "./components/SignIn";
 import PasswordForgetPage from "./components/PasswordForget";
 import HomePage from "./components/Home";
 import AccountPage from "./components/Account";
 import LoginPage from "./views/LoginPage/LoginPage";
 import ProfilePage from "./views/ProfilePage/ProfilePage";
+import ComponentsPage from "./views/Components/Components";
 
 import * as routes from "./constants/routes";
 
@@ -33,6 +34,7 @@ const App = () => (
       <Route exact path={routes.ACCOUNT} component={AccountPage} />
       <Route exact path={routes.LOGIN} component={LoginPage} />
       <Route exact path={routes.PROFILE_PAGE} component={ProfilePage} />
+      <Route exact path={routes.COMPONENTS} component={ComponentsPage} />
     </Switch>
     {/* </div> */}
   </Router>

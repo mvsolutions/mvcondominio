@@ -1,11 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
+
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
+import Person from "@material-ui/icons/Person";
 
 // core components
 import Header from "components/Header/Header.jsx";
@@ -18,13 +20,14 @@ import Card from "components/Card/Card.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
+import Select from "../../components/Select/Select";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 
 import image from "assets/img/bg8.jpg";
 
-class LoginPage extends React.Component {
+class SignUpPage extends React.Component {
   constructor(props) {
     super(props);
     // we use this to make the card to appear after the page has been rendered
@@ -70,6 +73,22 @@ class LoginPage extends React.Component {
                     </CardHeader>
                     <p className={classes.divider} />
                     <CardBody>
+                      <Select />
+                      <CustomInput
+                        labelText="Nome"
+                        id="name"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                        inputProps={{
+                          type: "text",
+                          endAdornment: (
+                            <InputAdornment position="end">
+                              <Person className={classes.inputIconsColor} />
+                            </InputAdornment>
+                          )
+                        }}
+                      />
                       <CustomInput
                         labelText="Email..."
                         id="email"
@@ -102,21 +121,28 @@ class LoginPage extends React.Component {
                           )
                         }}
                       />
+                      <CustomInput
+                        labelText="Repetir Senha"
+                        id="pass2"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                        inputProps={{
+                          type: "password",
+                          endAdornment: (
+                            <InputAdornment position="end">
+                              <Icon className={classes.inputIconsColor}>
+                                lock_outline
+                              </Icon>
+                            </InputAdornment>
+                          )
+                        }}
+                      />
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
                       <Button color="primary" size="md">
-                        Entrar
+                        Cadastrar
                       </Button>
-                    </CardFooter>
-                    <CardFooter className={classes.cardFooter}>
-                      <Button simple color="primary" size="sm">
-                        Esqueci minha senha
-                      </Button>
-                      <Link to={"/signup"} className={classes.link}>
-                        <Button simple color="primary" size="sm">
-                          Cadastrar-se
-                        </Button>
-                      </Link>
                     </CardFooter>
                   </form>
                 </Card>
@@ -129,4 +155,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default withStyles(loginPageStyle)(LoginPage);
+export default withStyles(loginPageStyle)(SignUpPage);

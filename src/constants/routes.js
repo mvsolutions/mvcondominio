@@ -5,4 +5,5 @@ export const HOME = "/home";
 export const ACCOUNT = "/account";
 export const PASSWORD_FORGET = "/pw-forget";
 export const LOGIN = "/login";
-export const PROFILE_PAGE = "/profile-page";
+export const PROFILE_PAGE = "/profile";
+export const COMPONENTS = "/components";
