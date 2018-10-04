@@ -27,14 +27,17 @@ function Footer({ ...props }) {
     <footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.left}>
-          <img width="150px" src={img} />
+          &copy; {1900 + new Date().getYear()} - Desenvolvido por{" "}
+          <a href="#" className={aClasses} target="_blank">
+            <img width="150px" src={img} />
+          </a>
         </div>
-        <div className={classes.right}>
+        {/* <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} - Desenvolvido por{" "}
           <a href="#" className={aClasses} target="_blank">
             MV Solutions.
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

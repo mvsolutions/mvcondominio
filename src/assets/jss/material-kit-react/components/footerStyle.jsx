@@ -13,13 +13,14 @@ const footerStyle = {
     display: "block"
   },
   left: {
-    float: "left!important",
-    display: "block"
+    padding: "15px 15px",
+    margin: "0",
+    float: "middle!important"
   },
   right: {
     padding: "15px 0",
     margin: "0",
-    float: "right!important"
+    float: "middle!important"
   },
   footer: {
     padding: "0.9375rem 0",
