@@ -21,7 +21,7 @@ import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 
-import image from "assets/img/bg7.png";
+import image from "assets/img/bg8.jpg";
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -56,7 +56,7 @@ class LoginPage extends React.Component {
           style={{
             backgroundImage: "url(" + image + ")",
             backgroundSize: "cover",
-            backgroundPosition: "top center"
+            backgroundPosition: "center"
           }}
         >
           <div className={classes.container}>
@@ -101,10 +101,17 @@ class LoginPage extends React.Component {
                           )
                         }}
                       />
+                      <Button color="primary" size="md">
+                        Entrar
+                      </Button>
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
-                      <Button simple color="primary" size="lg">
-                        Entrar
+                      <Button simple color="primary" size="sm">
+                        Esqueci minha senha
+                      </Button>
+
+                      <Button simple color="primary" size="sm">
+                        Criar conta
                       </Button>
                     </CardFooter>
                   </form>
