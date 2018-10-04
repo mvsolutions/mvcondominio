@@ -69,7 +69,7 @@ class SignUpPage extends React.Component {
                 <Card className={classes[this.state.cardAnimaton]}>
                   <form className={classes.form}>
                     <CardHeader color="primary" className={classes.cardHeader}>
-                      <h4>Login</h4>
+                      <h4>Cadastrar novo usuário</h4>
                     </CardHeader>
                     <p className={classes.divider} />
                     <CardBody>
