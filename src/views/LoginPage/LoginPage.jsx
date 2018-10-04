@@ -101,17 +101,18 @@ class LoginPage extends React.Component {
                           )
                         }}
                       />
+                    </CardBody>
+                    <CardFooter className={classes.cardFooter}>
                       <Button color="primary" size="md">
                         Entrar
                       </Button>
-                    </CardBody>
+                    </CardFooter>
                     <CardFooter className={classes.cardFooter}>
                       <Button simple color="primary" size="sm">
                         Esqueci minha senha
                       </Button>
-
                       <Button simple color="primary" size="sm">
-                        Criar conta
+                        Cadastrar-se
                       </Button>
                     </CardFooter>
                   </form>
