@@ -6,8 +6,8 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
 
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
-import Schedule from "@material-ui/icons/Schedule";
+import Assignment from "@material-ui/icons/Assignment";
+import People from "@material-ui/icons/People";
 import Person from "@material-ui/icons/Person";
 import Email from "@material-ui/icons/Email";
 import NavPills from "components/NavPills/NavPills.jsx";
@@ -76,27 +76,27 @@ class SignUpPage extends React.Component {
                     </CardHeader>
                     <p className={classes.divider} />
                     <CardBody>
-                      <GridContainer>
+                      <GridContainer justify="center">
                         <GridItem xs={12} sm={12} md={12} lg={12}>
                           <NavPills
                             color="primary"
                             tabs={[
                               {
                                 tabButton: "Admin / Sindico",
-                                tabIcon: Dashboard,
+                                tabIcon: Assignment,
                                 tabContent: (
                                   <div>
                                     <CustomInput
-                                      labelText="Responsavel"
-                                      id="name"
+                                      labelText="Condominio"
+                                      id="condominio"
                                       formControlProps={{
                                         fullWidth: true
                                       }}
                                       inputProps={{
-                                        type: "text",
+                                        type: "email",
                                         endAdornment: (
                                           <InputAdornment position="end">
-                                            <Person
+                                            <LocationCity
                                               className={
                                                 classes.inputIconsColor
                                               }
@@ -124,25 +124,7 @@ class SignUpPage extends React.Component {
                                         )
                                       }}
                                     />
-                                    <CustomInput
-                                      labelText="Condominio"
-                                      id="condominio"
-                                      formControlProps={{
-                                        fullWidth: true
-                                      }}
-                                      inputProps={{
-                                        type: "email",
-                                        endAdornment: (
-                                          <InputAdornment position="end">
-                                            <LocationCity
-                                              className={
-                                                classes.inputIconsColor
-                                              }
-                                            />
-                                          </InputAdornment>
-                                        )
-                                      }}
-                                    />
+
                                     <CustomInput
                                       labelText="Senha"
                                       id="pass"
@@ -190,7 +172,7 @@ class SignUpPage extends React.Component {
                               },
                               {
                                 tabButton: "Moradores",
-                                tabIcon: Schedule,
+                                tabIcon: People,
                                 tabContent: (
                                   <div>
                                     <CustomInput
