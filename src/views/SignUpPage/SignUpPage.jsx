@@ -6,8 +6,12 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import Icon from "@material-ui/core/Icon";
 
 // @material-ui/icons
-import Email from "@material-ui/icons/Email";
+import Dashboard from "@material-ui/icons/Dashboard";
+import Schedule from "@material-ui/icons/Schedule";
 import Person from "@material-ui/icons/Person";
+import Email from "@material-ui/icons/Email";
+import NavPills from "components/NavPills/NavPills.jsx";
+import LocationCity from "@material-ui/icons/LocationCity";
 
 // core components
 import Header from "components/Header/Header.jsx";
@@ -20,7 +24,6 @@ import Card from "components/Card/Card.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
-import Select from "../../components/Select/Select";
 import CustomInput from "components/CustomInput/CustomInput.jsx";
 
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
@@ -73,71 +76,210 @@ class SignUpPage extends React.Component {
                     </CardHeader>
                     <p className={classes.divider} />
                     <CardBody>
-                      <Select />
-                      <CustomInput
-                        labelText="Nome"
-                        id="name"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          type: "text",
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <Person className={classes.inputIconsColor} />
-                            </InputAdornment>
-                          )
-                        }}
-                      />
-                      <CustomInput
-                        labelText="Email..."
-                        id="email"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          type: "email",
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <Email className={classes.inputIconsColor} />
-                            </InputAdornment>
-                          )
-                        }}
-                      />
-                      <CustomInput
-                        labelText="Senha"
-                        id="pass"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          type: "password",
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <Icon className={classes.inputIconsColor}>
-                                lock_outline
-                              </Icon>
-                            </InputAdornment>
-                          )
-                        }}
-                      />
-                      <CustomInput
-                        labelText="Repetir Senha"
-                        id="pass2"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          type: "password",
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <Icon className={classes.inputIconsColor}>
-                                lock_outline
-                              </Icon>
-                            </InputAdornment>
-                          )
-                        }}
-                      />
+                      <GridContainer>
+                        <GridItem xs={12} sm={12} md={12} lg={12}>
+                          <NavPills
+                            color="primary"
+                            tabs={[
+                              {
+                                tabButton: "Admin / Sindico",
+                                tabIcon: Dashboard,
+                                tabContent: (
+                                  <div>
+                                    <CustomInput
+                                      labelText="Responsavel"
+                                      id="name"
+                                      formControlProps={{
+                                        fullWidth: true
+                                      }}
+                                      inputProps={{
+                                        type: "text",
+                                        endAdornment: (
+                                          <InputAdornment position="end">
+                                            <Person
+                                              className={
+                                                classes.inputIconsColor
+                                              }
+                                            />
+                                          </InputAdornment>
+                                        )
+                                      }}
+                                    />
+                                    <CustomInput
+                                      labelText="Email..."
+                                      id="email"
+                                      formControlProps={{
+                                        fullWidth: true
+                                      }}
+                                      inputProps={{
+                                        type: "email",
+                                        endAdornment: (
+                                          <InputAdornment position="end">
+                                            <Email
+                                              className={
+                                                classes.inputIconsColor
+                                              }
+                                            />
+                                          </InputAdornment>
+                                        )
+                                      }}
+                                    />
+                                    <CustomInput
+                                      labelText="Condominio"
+                                      id="condominio"
+                                      formControlProps={{
+                                        fullWidth: true
+                                      }}
+                                      inputProps={{
+                                        type: "email",
+                                        endAdornment: (
+                                          <InputAdornment position="end">
+                                            <LocationCity
+                                              className={
+                                                classes.inputIconsColor
+                                              }
+                                            />
+                                          </InputAdornment>
+                                        )
+                                      }}
+                                    />
+                                    <CustomInput
+                                      labelText="Senha"
+                                      id="pass"
+                                      formControlProps={{
+                                        fullWidth: true
+                                      }}
+                                      inputProps={{
+                                        type: "password",
+                                        endAdornment: (
+                                          <InputAdornment position="end">
+                                            <Icon
+                                              className={
+                                                classes.inputIconsColor
+                                              }
+                                            >
+                                              lock_outline
+                                            </Icon>
+                                          </InputAdornment>
+                                        )
+                                      }}
+                                    />
+                                    <CustomInput
+                                      labelText="Repetir Senha"
+                                      id="pass2"
+                                      formControlProps={{
+                                        fullWidth: true
+                                      }}
+                                      inputProps={{
+                                        type: "password",
+                                        endAdornment: (
+                                          <InputAdornment position="end">
+                                            <Icon
+                                              className={
+                                                classes.inputIconsColor
+                                              }
+                                            >
+                                              lock_outline
+                                            </Icon>
+                                          </InputAdornment>
+                                        )
+                                      }}
+                                    />
+                                  </div>
+                                )
+                              },
+                              {
+                                tabButton: "Moradores",
+                                tabIcon: Schedule,
+                                tabContent: (
+                                  <div>
+                                    <CustomInput
+                                      labelText="Nome"
+                                      id="name"
+                                      formControlProps={{
+                                        fullWidth: true
+                                      }}
+                                      inputProps={{
+                                        type: "text",
+                                        endAdornment: (
+                                          <InputAdornment position="end">
+                                            <Person
+                                              className={
+                                                classes.inputIconsColor
+                                              }
+                                            />
+                                          </InputAdornment>
+                                        )
+                                      }}
+                                    />
+                                    <CustomInput
+                                      labelText="Email..."
+                                      id="email"
+                                      formControlProps={{
+                                        fullWidth: true
+                                      }}
+                                      inputProps={{
+                                        type: "email",
+                                        endAdornment: (
+                                          <InputAdornment position="end">
+                                            <Email
+                                              className={
+                                                classes.inputIconsColor
+                                              }
+                                            />
+                                          </InputAdornment>
+                                        )
+                                      }}
+                                    />
+                                    <CustomInput
+                                      labelText="Senha"
+                                      id="pass"
+                                      formControlProps={{
+                                        fullWidth: true
+                                      }}
+                                      inputProps={{
+                                        type: "password",
+                                        endAdornment: (
+                                          <InputAdornment position="end">
+                                            <Icon
+                                              className={
+                                                classes.inputIconsColor
+                                              }
+                                            >
+                                              lock_outline
+                                            </Icon>
+                                          </InputAdornment>
+                                        )
+                                      }}
+                                    />
+                                    <CustomInput
+                                      labelText="Repetir Senha"
+                                      id="pass2"
+                                      formControlProps={{
+                                        fullWidth: true
+                                      }}
+                                      inputProps={{
+                                        type: "password",
+                                        endAdornment: (
+                                          <InputAdornment position="end">
+                                            <Icon
+                                              className={
+                                                classes.inputIconsColor
+                                              }
+                                            >
+                                              lock_outline
+                                            </Icon>
+                                          </InputAdornment>
+                                        )
+                                      }}
+                                    />
+                                  </div>
+                                )
+                              }
+                            ]}
+                          />
+                        </GridItem>
+                      </GridContainer>
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
                       <Button color="primary" size="md">
