@@ -33,13 +33,29 @@ import image from "assets/img/bg8.jpg";
 class SignUpPage extends React.Component {
   constructor(props) {
     super(props);
-    // we use this to make the card to appear after the page has been rendered
+
     this.state = {
-      cardAnimaton: "cardHidden"
+      cardAnimaton: "cardHidden",
+      admCondominio: "",
+      admEmail: "",
+      admSenha: "",
+      admSenha2: "",
+      morNome: "",
+      morEmail: "",
+      morSenha: "",
+      morSenha2: "",
+      admCondominioError: true,
+      admEmailError: true,
+      admSenhaError: true,
+      admSenha2Error: true,
+      morNomeError: true,
+      morEmailError: true,
+      morSenhaError: true,
+      morSenha2Error: true,
+      submitButton: true
     };
   }
   componentDidMount() {
-    // we add a hidden class to the card and after 700 ms we delete it and the transition appears
     setTimeout(
       function() {
         this.setState({ cardAnimaton: "" });
@@ -47,8 +63,71 @@ class SignUpPage extends React.Component {
       700
     );
   }
+
+  onChangeInput = (id, value) => {
+    let error = true;
+
+    switch (id) {
+      case "admCondominio":
+        value === "" ? (error = true) : (error = false);
+        this.setState({
+          admCondominio: value,
+          admCondominioError: error
+        });
+        break;
+
+      case "admEmail":
+        value === "" ? (error = true) : (error = false);
+        this.setState({
+          admEmail: value,
+          admEmailError: error
+        });
+        break;
+
+      case "admSenha":
+        value === "" ? (error = true) : (error = false);
+        this.setState({
+          admSenha: value,
+          admSenhaError: error
+        });
+        break;
+
+      case "admSenha2":
+        value === "" ? (error = true) : (error = false);
+
+        this.setState({
+          admSenha2: value,
+          admSenha2Error: error
+        });
+        break;
+
+      default:
+        return;
+    }
+
+    if ((this.state.admCondominioError && this.state.admEmailError) === false) {
+      this.setState({
+        submitButton: false
+      });
+    }
+  };
+
+  validatePassword = () => {
+    if (this.state.admSenha !== this.state.admSenha2) {
+      this.setState({
+        admSenha2Error: true
+      });
+    }
+  };
+
+  submitForm = event => {
+    console.log(this.state);
+    event.preventDefault();
+  };
+
   render() {
     const { classes, ...rest } = this.props;
+
     return (
       <div>
         <Header
@@ -70,7 +149,7 @@ class SignUpPage extends React.Component {
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={4}>
                 <Card className={classes[this.state.cardAnimaton]}>
-                  <form className={classes.form}>
+                  <form onSubmit={this.submitForm} className={classes.form}>
                     <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Cadastrar novo usuário</h4>
                     </CardHeader>
@@ -82,18 +161,25 @@ class SignUpPage extends React.Component {
                             color="primary"
                             tabs={[
                               {
-                                tabButton: "Admin / Sindico",
+                                tabButton: "Admin / Síndico",
                                 tabIcon: Assignment,
                                 tabContent: (
                                   <div>
                                     <CustomInput
                                       labelText="Condominio"
-                                      id="condominio"
+                                      id="admCondominio"
+                                      error={this.state.admCondominioError}
+                                      onChange={e =>
+                                        this.onChangeInput(
+                                          e.target.id,
+                                          e.target.value
+                                        )
+                                      }
                                       formControlProps={{
                                         fullWidth: true
                                       }}
                                       inputProps={{
-                                        type: "email",
+                                        type: "text",
                                         endAdornment: (
                                           <InputAdornment position="end">
                                             <LocationCity
@@ -107,7 +193,14 @@ class SignUpPage extends React.Component {
                                     />
                                     <CustomInput
                                       labelText="Email..."
-                                      id="email"
+                                      id="admEmail"
+                                      error={this.state.admEmailError}
+                                      onChange={e =>
+                                        this.onChangeInput(
+                                          e.target.id,
+                                          e.target.value
+                                        )
+                                      }
                                       formControlProps={{
                                         fullWidth: true
                                       }}
@@ -127,7 +220,14 @@ class SignUpPage extends React.Component {
 
                                     <CustomInput
                                       labelText="Senha"
-                                      id="pass"
+                                      id="admSenha"
+                                      error={this.state.admSenhaError}
+                                      onChange={e =>
+                                        this.onChangeInput(
+                                          e.target.id,
+                                          e.target.value
+                                        )
+                                      }
                                       formControlProps={{
                                         fullWidth: true
                                       }}
@@ -148,7 +248,15 @@ class SignUpPage extends React.Component {
                                     />
                                     <CustomInput
                                       labelText="Repetir Senha"
-                                      id="pass2"
+                                      id="admSenha2"
+                                      error={this.state.admSenha2Error}
+                                      onBlur={this.validatePassword}
+                                      onChange={e =>
+                                        this.onChangeInput(
+                                          e.target.id,
+                                          e.target.value
+                                        )
+                                      }
                                       formControlProps={{
                                         fullWidth: true
                                       }}
@@ -177,7 +285,14 @@ class SignUpPage extends React.Component {
                                   <div>
                                     <CustomInput
                                       labelText="Nome"
-                                      id="name"
+                                      id="morNome"
+                                      error={this.state.morNomeError}
+                                      onChange={e =>
+                                        this.onChangeInput(
+                                          e.target.id,
+                                          e.target.value
+                                        )
+                                      }
                                       formControlProps={{
                                         fullWidth: true
                                       }}
@@ -196,7 +311,14 @@ class SignUpPage extends React.Component {
                                     />
                                     <CustomInput
                                       labelText="Email..."
-                                      id="email"
+                                      id="morEmail"
+                                      error={this.state.morEmailError}
+                                      onChange={e =>
+                                        this.onChangeInput(
+                                          e.target.id,
+                                          e.target.value
+                                        )
+                                      }
                                       formControlProps={{
                                         fullWidth: true
                                       }}
@@ -215,7 +337,14 @@ class SignUpPage extends React.Component {
                                     />
                                     <CustomInput
                                       labelText="Senha"
-                                      id="pass"
+                                      id="morSenha"
+                                      error={this.state.morSenhaError}
+                                      onChange={e =>
+                                        this.onChangeInput(
+                                          e.target.id,
+                                          e.target.value
+                                        )
+                                      }
                                       formControlProps={{
                                         fullWidth: true
                                       }}
@@ -236,7 +365,14 @@ class SignUpPage extends React.Component {
                                     />
                                     <CustomInput
                                       labelText="Repetir Senha"
-                                      id="pass2"
+                                      id="morSenha2"
+                                      error={this.state.morSenha2Error}
+                                      onChange={e =>
+                                        this.onChangeInput(
+                                          e.target.id,
+                                          e.target.value
+                                        )
+                                      }
                                       formControlProps={{
                                         fullWidth: true
                                       }}
@@ -264,7 +400,12 @@ class SignUpPage extends React.Component {
                       </GridContainer>
                     </CardBody>
                     <CardFooter className={classes.cardFooter}>
-                      <Button color="primary" size="md">
+                      <Button
+                        type="submit"
+                        color="primary"
+                        size="md"
+                        disabled={this.state.submitButton}
+                      >
                         Cadastrar
                       </Button>
                     </CardFooter>

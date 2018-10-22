@@ -63,6 +63,8 @@ function CustomInput({ ...props }) {
         </InputLabel>
       ) : null}
       <Input
+        onChange={props.onChange}
+        onBlur={props.onBlur}
         classes={{
           input: inputClasses,
           root: marginTop,
